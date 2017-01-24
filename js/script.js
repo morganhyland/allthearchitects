@@ -9,6 +9,10 @@ $(document).ready ( function() {
 
     $(".__form__item").focus();
     // $(".__form__item").select();
+    if( /Android|webOS|iPhone|iPad|iPod/i.test(navigator.userAgent) ) {
+      $(".__link__instagram").attr("href","instagram://user?username=allthearchitects");
+    }
+
 
   $(".__screenshot__wrapper").click( function(){
     var _thisRowsCountriesLinks = $(this).closest(".__row__container").find(".__link__container");
