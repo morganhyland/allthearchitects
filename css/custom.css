@@ -9,6 +9,11 @@
   letter-spacing: 0.015em;
 }
 
+input{
+  border-radius: 0px;
+  -webkit-border-radius:0px;
+}
+
 a.__link__item:visited {
   /*color: blue;*/
   color:#666;
