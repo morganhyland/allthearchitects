@@ -17,8 +17,8 @@ $(document).ready ( function() {
         var now = new Date().valueOf();
         setTimeout(function () {
           if (new Date().valueOf() - now > 100) return;
-          window.location = "https://facebook.com/allthearchitects";
-          }, 25);
+          window.location = "https://instagram.com/allthearchitects";
+        }, 100);
         window.location = "instagram://user?username=allthearchitects";
       });
       $(".__link__facebook" ).click(function(){
