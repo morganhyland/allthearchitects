@@ -18,7 +18,7 @@ $(document).ready ( function() {
         setTimeout(function () {
           if (new Date().valueOf() - now > 100) return;
           window.location = "https://instagram.com/allthearchitects";
-        }, 100);
+        }, 25);
         window.location = "instagram://user?username=allthearchitects";
       });
       $(".__link__facebook" ).click(function(){
