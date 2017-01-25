@@ -11,7 +11,7 @@ $(document).ready ( function() {
     // $(".__form__item").select();
     if( /Android|webOS|iPhone|iPad|iPod/i.test(navigator.userAgent) ) {
       $(".__link__instagram").attr("href","instagram://user?username=allthearchitects");
-      $(".__link__facebook").attr("href","fb://profile/allthearchitects");
+      $(".__link__facebook").attr("href","fb://profile/1364924453549098");
     }
 
 
