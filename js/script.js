@@ -17,10 +17,11 @@ $(document).ready ( function() {
         var now = new Date().valueOf();
         setTimeout(function () {
           if (new Date().valueOf() - now > 100) return;
-          window.location = "https://instagram.com/allthearchitects";
+          window.location = "http://instagram.com/allthearchitects";
         }, 25);
         window.location = "instagram://user?username=allthearchitects";
       });
+
       $(".__link__facebook" ).click(function(){
         var now = new Date().valueOf();
         setTimeout(function () {
