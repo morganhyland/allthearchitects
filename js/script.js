@@ -11,9 +11,16 @@ $(document).ready ( function() {
     // $(".__form__item").select();
     if( /Android|webOS|iPhone|iPad|iPod/i.test(navigator.userAgent) ) {
       $(".__link__instagram").attr("href","instagram://user?username=allthearchitects");
-      $(".__link__facebook").attr("href","fb://profile/1364924453549098");
+      // $(".__link__facebook").attr("href","fb://profile/1364924453549098");
+      $(".__link__facebook").click(function(){
+        var now = new Date().valueOf();
+        setTimeout(function () {
+          if (new Date().valueOf() - now > 200) return;
+          window.location = "https://facebook.com/allthearchitects";
+          }, 25);
+        window.location = "fb://profile/1364924453549098";
+      });
     }
-
 
   $(".__screenshot__wrapper").click( function(){
     var _thisRowsCountriesLinks = $(this).closest(".__row__container").find(".__link__container");
