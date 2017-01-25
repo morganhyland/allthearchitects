@@ -15,7 +15,7 @@ $(document).ready ( function() {
       $(".__link__facebook").click(function(){
         var now = new Date().valueOf();
         setTimeout(function () {
-          if (new Date().valueOf() - now > 200) return;
+          if (new Date().valueOf() - now > 100) return;
           window.location = "https://facebook.com/allthearchitects";
           }, 25);
         window.location = "fb://profile/1364924453549098";
