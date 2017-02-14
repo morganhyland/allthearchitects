@@ -56,7 +56,6 @@ $(document).ready ( function() {
     if( $(this).hasClass("__menu__footer") == true )
       $(window).scrollTop(9999);
 
-
   }); // click menu toggle
 }); // document ready
 
