@@ -61,7 +61,7 @@ $(document).ready ( function() {
     else
       _toggleClass(_thisRowsCountriesLinks, "dn-l", "db-l")
 
-  }); // click screenshot
+  }); // click title
   $(".__menu__toggle").click( function(){
 
     var _thisMenuItems = $(this).closest(".__row__container").find(".__menu__item");
