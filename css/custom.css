@@ -3,6 +3,10 @@
   font-size: 3vw;
 }
 
+::selection{
+  background-color: transparent;
+}
+
 * {
   color:#000;
   line-height:1.4em;
@@ -13,7 +17,9 @@ input{
   border-radius: 0px;
   -webkit-border-radius:0px;
 }
-
+.__title__item{
+  cursor:pointer;
+}
 a.__link__item:visited {
   /*color: blue;*/
   color:#666;
