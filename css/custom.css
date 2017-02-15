@@ -3,9 +3,9 @@
   font-size: 3vw;
 }
 
-::selection{
+/*::selection{
   background-color: transparent;
-}
+}*/
 
 * {
   color:#000;
