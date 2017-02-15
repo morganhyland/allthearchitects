@@ -17,6 +17,22 @@ input{
   border-radius: 0px;
   -webkit-border-radius:0px;
 }
+
+textarea ::-webkit-input-placeholder { /* Chrome */
+  color: #aaa;
+}
+textarea :-ms-input-placeholder { /* IE 10+ */
+  color: #aaa;
+}
+textarea ::-moz-placeholder { /* Firefox 19+ */
+  color: #aaa;
+  opacity: 1;
+}
+textarea :-moz-placeholder { /* Firefox 4 - 18 */
+  color: #aaa;
+  opacity: 1;
+}
+
 .__title__item{
   cursor:pointer;
 }

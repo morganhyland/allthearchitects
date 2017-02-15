@@ -8,7 +8,7 @@ $(document).ready ( function() {
     $(".__time__item").text("in " + timeSince(Date.parse(_time)) + "");
 
     $(".__form__item").focus();
-    // $(".__form__item").select();
+    $(".__form__item").select();
     if( /Android|webOS|iPhone|iPad|iPod/i.test(navigator.userAgent) ) {
       // $(".__link__instagram").attr("href","instagram://user?username=allthearchitects");
       // $(".__link__facebook").attr("href","fb://profile/1364924453549098");
