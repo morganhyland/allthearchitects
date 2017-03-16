@@ -47,19 +47,19 @@ $(document).ready ( function() {
       _toggleClass(_thisRowsCountriesLinks, "dn-l", "db-l")
 
   }); // click screenshot
-  $(".__title__item" ).click( function(){
-    var _thisRowsCountriesLinks = $(this).closest(".__row__container").find(".__link__container");
-    var _thisCountryIndex = $(this).closest(".__country__container").index();
-    if (_checkSize() == "mobile")
-        _toggleClass(_thisRowsCountriesLinks.slice(_thisCountryIndex, _thisCountryIndex + 1), "dn", "db")
-    else if (_checkSize() == "tablet") {
-      if ( _thisCountryIndex <= 1)
-        _toggleClass(_thisRowsCountriesLinks.slice(0,2), "dn-m", "db-m")
-      else
-        _toggleClass(_thisRowsCountriesLinks.slice(2,4), "dn-m", "db-m")
-    }
-    else
-      _toggleClass(_thisRowsCountriesLinks, "dn-l", "db-l")
+  // $(".__title__item" ).click( function(){
+  //   var _thisRowsCountriesLinks = $(this).closest(".__row__container").find(".__link__container");
+  //   var _thisCountryIndex = $(this).closest(".__country__container").index();
+  //   if (_checkSize() == "mobile")
+  //       _toggleClass(_thisRowsCountriesLinks.slice(_thisCountryIndex, _thisCountryIndex + 1), "dn", "db")
+  //   else if (_checkSize() == "tablet") {
+  //     if ( _thisCountryIndex <= 1)
+  //       _toggleClass(_thisRowsCountriesLinks.slice(0,2), "dn-m", "db-m")
+  //     else
+  //       _toggleClass(_thisRowsCountriesLinks.slice(2,4), "dn-m", "db-m")
+  //   }
+  //   else
+  //     _toggleClass(_thisRowsCountriesLinks, "dn-l", "db-l")
 
   }); // click title
   $(".__menu__toggle").click( function(){

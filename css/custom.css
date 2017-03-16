@@ -34,15 +34,19 @@ textarea :-moz-placeholder { /* Firefox 4 - 18 */
 }
 
 .__title__item{
-  cursor:pointer;
+  cursor: default;
 }
 a.__link__item:visited {
   /*color: blue;*/
-  color:#666;
+  /*color:#777;*/
+  /*color:darkblue;*/
 }
 
 .__link__item:hover {
-  background-color: #e0e0e0;
+  /*background-color: #e0e0e0;*/
+  /*background-color: #d0d0d0;*/
+  background-color: #fff;
+  /*color: #aaa;*/
 }
 
 .__link__item:after {
