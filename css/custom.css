@@ -145,6 +145,9 @@ a.__link__item:visited {
   .mobile-test{
     text-align:center;
   }
+  .__country__container:nth-child(3){
+    clear:both;
+  }
 }
 
 @media screen and (min-width:1200px) {
@@ -155,4 +158,8 @@ a.__link__item:visited {
   .mobile-test{
     text-align:right;
   }
+}
+
+.__expand__button{
+  cursor: default;
 }

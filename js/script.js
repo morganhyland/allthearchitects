@@ -32,19 +32,45 @@ $(document).ready ( function() {
       });
     }
 
-  $(".__screenshot__wrapper" ).click( function(){
+  $(".__expand__button" ).click( function(){
     var _thisRowsCountriesLinks = $(this).closest(".__row__container").find(".__link__container");
     var _thisCountryIndex = $(this).closest(".__country__container").index();
-    if (_checkSize() == "mobile")
-        _toggleClass(_thisRowsCountriesLinks.slice(_thisCountryIndex, _thisCountryIndex + 1), "dn", "db")
-    else if (_checkSize() == "tablet") {
-      if ( _thisCountryIndex <= 1)
-        _toggleClass(_thisRowsCountriesLinks.slice(0,2), "dn-m", "db-m")
-      else
-        _toggleClass(_thisRowsCountriesLinks.slice(2,4), "dn-m", "db-m")
+    var _thisCountry = _thisRowsCountriesLinks.slice(_thisCountryIndex, _thisCountryIndex + 1);
+    var _thisCountrysLinks = _thisCountry.find(".__link__item__hide");
+
+
+
+    if (_checkSize() == "mobile"){
+        _toggleClass(_thisCountrysLinks, "dn", "db");
+        if(_thisCountrysLinks.hasClass("db")){
+          $(this).text("View Less")
+        }else{
+          $(this).text("View More")
+        }
+
+    }else if (_checkSize() == "tablet") {
+      if ( _thisCountryIndex <= 1){
+        _toggleClass(_thisRowsCountriesLinks.slice(0,2).find(".__link__item__hide"), "db-m", "dn-m")
+
+        if(_thisRowsCountriesLinks.slice(0,2).find(".__link__item__hide").hasClass("db-m")){
+          _thisRowsCountriesLinks.slice(0,2).find('.__expand__button').text("View Less")
+        }else{
+          _thisRowsCountriesLinks.slice(0,2).find('.__expand__button').text("View More")
+        }
+
+      }
+      else{
+        _toggleClass(_thisRowsCountriesLinks.slice(2,4).find(".__link__item__hide"), "db-m", "dn-m")
+        if(_thisRowsCountriesLinks.slice(2,4).find(".__link__item__hide").hasClass("db-m")){
+          _thisRowsCountriesLinks.slice(2,4).find('.__expand__button').text("View Less")
+        }else{
+          _thisRowsCountriesLinks.slice(2,4).find('.__expand__button').text("View More")
+        }
+
+      }
     }
-    else
-      _toggleClass(_thisRowsCountriesLinks, "dn-l", "db-l")
+    // else
+    //   _toggleClass(_thisRowsCountriesLinks, "dn-l", "db-l")
 
   }); // click screenshot
   // $(".__title__item" ).click( function(){
@@ -61,7 +87,7 @@ $(document).ready ( function() {
   //   else
   //     _toggleClass(_thisRowsCountriesLinks, "dn-l", "db-l")
 
-  }); // click title
+  // }); // click title
   $(".__menu__toggle").click( function(){
 
     var _thisMenuItems = $(this).closest(".__row__container").find(".__menu__item");
@@ -95,7 +121,7 @@ function _toggleClass ( _itemApply, _classDefault, _classToggle) {
     _itemApply.each( function(){
       $(this).removeClass(_classDefault);
       $(this).addClass(_classToggle);
-      var _position = $(this).parent().offset().top;
+      var _position = $(this).closest(".__country__container").offset().top;
       $(window).scrollTop(_position);
     });
   }
@@ -103,7 +129,7 @@ function _toggleClass ( _itemApply, _classDefault, _classToggle) {
     _itemApply.each( function(){
       $(this).removeClass(_classToggle);
       $(this).addClass(_classDefault);
-      var _position = $(this).parent().offset().top;
+      var _position = $(this).closest(".__country__container").offset().top;
       $(window).scrollTop(_position);
     });
   }
