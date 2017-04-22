@@ -42,7 +42,7 @@ a.__link__item:visited {
   /*color:darkblue;*/
 }
 
-.__link__item:hover {
+.__link__item:hover,.__link__item__hide:hover {
   /*background-color: #e0e0e0;*/
   /*background-color: #d0d0d0;*/
   background-color: #fff;
