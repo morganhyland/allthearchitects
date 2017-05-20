@@ -163,3 +163,6 @@ a.__link__item:visited {
 .__expand__button{
   cursor: default;
 }
+.__form__signup{
+  border-width: 2px;
+}
