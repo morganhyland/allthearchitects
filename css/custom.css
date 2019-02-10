@@ -11,6 +11,7 @@
   color:#000;
   line-height:1.4em;
   letter-spacing: 0.015em;
+  box-sizing:border-box;
 }
 
 input{
