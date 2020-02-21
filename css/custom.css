@@ -42,6 +42,15 @@ a.__link__item:visited {
   /*color:#777;*/
   /*color:darkblue;*/
 }
+main a:visited{
+  color:blue;
+}
+
+main .__link__button__item a:visited{
+  color:white;
+  background:black !important;
+
+}
 
 .__link__item:hover,.__link__item__hide:hover {
   /*background-color: #e0e0e0;*/
